@@ -13,6 +13,16 @@
     <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
+  <style>
+    #result th,
+    #result td {
+      text-align: center;
+    }
+    #result td {
+      color: red;
+      font-size: 20px;
+    }
+  </style>
 </head>
 <body>
 
@@ -42,14 +52,14 @@
 <div class="container" style="margin-top: 100px;">
   <div class="jumbotron">
     <h1>詳しいサギ診断結果</h1>
-
-    <table class="table table-bordered" style="background-color: white;">
+    <p>詐欺脆弱性診断マトリクスによる診断結果です。</p>
+    <table class="table table-bordered" style="background-color: white;" id="result">
       <tr><th></th><th>振り込め詐欺</th><th>点検商法</th><th>次々販売</th></tr>
-      <tr><th>自信過剰</th><td>○</td><td></td><td></td></tr>
-      <tr><th>他者過剰信頼</th><td></td><td></td><td></td></tr>
-      <tr><th>うっかり</th><td></td><td></td><td></td></tr>
+      <tr><th>自信過剰タイプ</th><td id="type_0_0"></td><td id="type_0_1"></td><td id="type_0_2"></td></tr>
+      <tr><th>他者過剰信頼タイプ</th><td id="type_1_0"></td><td id="type_1_1"></td><td id="type_1_2"></td></tr>
+      <tr><th>うっかりタイプ</th><td id="type_2_0"></td><td id="type_2_1"></td><td id="type_2_2"></td></tr>
     </table>
-
+    <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
     <p><a class="btn btn-lg btn-primary" role="button" href="result.html">前のページへ戻る</a></p>
   </div>
 </div>
@@ -57,6 +67,7 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/sagishindan_detailed_result.js"></script>
 
 </body>
 </html>
