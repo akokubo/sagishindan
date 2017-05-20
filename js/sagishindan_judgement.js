@@ -5,6 +5,7 @@ var SAGISHINDAN = {};
 
 SAGISHINDAN.buildPage = function () {
     "use strict";
+
     var question = SAGISHINDAN.questions[SAGISHINDAN.question_number];
     $("#question_number").replaceWith("<span id=\"question_number\">" + SAGISHINDAN.question_number + "</span>");
     $("#text").replaceWith("<p id=\"text\">" + question.text + "</p>");
@@ -13,6 +14,7 @@ SAGISHINDAN.buildPage = function () {
 
 $(document).ready(function () {
     "use strict";
+
     SAGISHINDAN.question_number = 1;
     SAGISHINDAN.scores = {"自信過剰": 0, "他者過剰信頼": 0, "うっかり": 0};
     SAGISHINDAN.questions = [
@@ -30,7 +32,7 @@ $(document).ready(function () {
         {"type": "result", "text": "診断結果"}
     ];
 
-    $(document).on("click", "#yes", function (e) {
+    SAGISHINDAN.pageTransition = function (e) {
         e.preventDefault();
         if (SAGISHINDAN.question_number === SAGISHINDAN.questions.length - 2) {
             sessionStorage.setItem("socres", SAGISHINDAN.scores);
@@ -39,17 +41,13 @@ $(document).ready(function () {
             SAGISHINDAN.question_number = SAGISHINDAN.question_number + 1;
             SAGISHINDAN.buildPage();
         }
-    });
+    };
 
+    $(document).on("click", "#yes", function (e) {
+        SAGISHINDAN.pageTransition(e);
+    });
     $(document).on("click", "#no", function (e) {
-        e.preventDefault();
-        if (SAGISHINDAN.question_number === SAGISHINDAN.questions.length - 2) {
-            sessionStorage.setItem("socres", SAGISHINDAN.scores);
-            window.location.href = "result.html";
-        } else {
-            SAGISHINDAN.question_number = SAGISHINDAN.question_number + 1;
-            SAGISHINDAN.buildPage();
-        }
+        SAGISHINDAN.pageTransition(e);
     });
 
     SAGISHINDAN.buildPage();

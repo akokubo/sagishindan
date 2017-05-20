@@ -5,6 +5,7 @@ var SAGISHINDAN = {};
 
 SAGISHINDAN.buildPage = function () {
     "use strict";
+
     $("#type").replaceWith("<span id=\"type\">" + SAGISHINDAN.type + "</span>");
     $("#fraud").replaceWith("<span id=\"fraud\">" + SAGISHINDAN.fraud.name + "</span>");
     $("#fraud_defense").replaceWith("<span id=\"fraud_defense\">" + SAGISHINDAN.fraud.name + "</span>");
@@ -14,7 +15,8 @@ SAGISHINDAN.buildPage = function () {
 $(document).ready(function () {
     "use strict";
 
-    var result1, result2;
+    var result1;
+    var result2;
 
     SAGISHINDAN.type = sessionStorage.getItem("type");
     SAGISHINDAN.fraud = {
