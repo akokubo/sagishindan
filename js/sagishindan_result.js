@@ -49,6 +49,8 @@ $(document).ready(function () {
 
         sessionStorage.setItem("type", SAGISHINDAN.type);
         sessionStorage.setItem("fraud_name", SAGISHINDAN.fraud.name);
+        sessionStorage.setItem("when", SAGISHINDAN.fraud.when);
+        sessionStorage.setItem("harm", SAGISHINDAN.fraud.harm);
         sessionStorage.setItem("fraud_image", SAGISHINDAN.fraud.image);
         sessionStorage.setItem("matrix", result1 + "_" + result2);
     }
