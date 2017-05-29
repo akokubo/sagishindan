@@ -28,13 +28,18 @@ $(document).ready(function () {
         SAGISHINDAN.types = [
             "自信過剰",
             "他者過剰信頼",
-            "うっかり"
+            "うっかり",
+            "思い込み",
+            "過剰自己暗示",
+            "詐欺には引っかからない"
         ];
 
         SAGISHINDAN.frauds = [
             {name: "振り込め詐欺", image: "akutoku_shouhou_furikome_sagi.png"},
+            {name: "特殊詐欺", image: "akutoku_shouhou_furikome_sagi.png"},
             {name: "点検商法", image: "syoubou_seibishi_syoukaki.png"},
-            {name: "次々販売", image: "akutoku_shouhou_houmon.png"}
+            {name: "次々販売", image: "akutoku_shouhou_houmon.png"},
+            {name: "二次詐欺", image: "akutoku_shouhou_houmon.png"}
         ];
 
         result1 = Math.floor(Math.random() * SAGISHINDAN.types.length);
