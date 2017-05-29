@@ -35,11 +35,11 @@ $(document).ready(function () {
         ];
 
         SAGISHINDAN.frauds = [
-            {name: "振り込め詐欺", image: "akutoku_shouhou_furikome_sagi.png"},
-            {name: "特殊詐欺", image: "akutoku_shouhou_furikome_sagi.png"},
-            {name: "点検商法", image: "syoubou_seibishi_syoukaki.png"},
-            {name: "次々販売", image: "akutoku_shouhou_houmon.png"},
-            {name: "二次詐欺", image: "akutoku_shouhou_houmon.png"}
+            {name: "振り込め詐欺", when: "振り込め詐欺犯から電話が来た", harm: "詐欺", image: "akutoku_shouhou_furikome_sagi.png"},
+            {name: "特殊詐欺", when: "特殊詐欺犯から電話が来た", harm: "詐欺", image: "akutoku_shouhou_furikome_sagi.png"},
+            {name: "点検商法", when: "点検商法の犯人が来た", harm: "点検商法被害", image: "syoubou_seibishi_syoukaki.png"},
+            {name: "次々販売", when: "次々販売が来た", harm: "次々販売被害", image: "akutoku_shouhou_houmon.png"},
+            {name: "二次詐欺", when: "二次詐欺の電話や犯人が来た", harm: "詐欺", image: "akutoku_shouhou_houmon.png"}
         ];
 
         result1 = Math.floor(Math.random() * SAGISHINDAN.types.length);
