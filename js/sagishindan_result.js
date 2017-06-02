@@ -31,7 +31,7 @@ $(document).ready(function () {
             "うっかり",
             "思い込み",
             "過剰自己暗示",
-            "詐欺には引っかからない"
+            "詐欺に引っかかりにくい"
         ];
 
         SAGISHINDAN.frauds = [
