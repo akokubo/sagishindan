@@ -22,7 +22,8 @@
       "sizes": "256x256",
       "type": "image/png"
     }],
-  "start_url": "/index.html",
+  "start_url": "/sagishindan/",
+  "description": "sample for sagishindan",
   "display": "standalone",
   "background_color": "#BD913F",
   "theme_color": "#916028"

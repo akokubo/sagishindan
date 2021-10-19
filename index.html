@@ -8,11 +8,14 @@
   <title>詐欺診断(サンプル)</title>
 
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-  <!--[if lt IE 9]>
-    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
 
+  <style>
+    .add-button {
+      position: absolute;
+      top: 1px;
+      left: 1px;
+    }
+  </style>
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
@@ -48,10 +51,13 @@
     <p>詐欺にかからないように心理学を使って診断してみましょう。</p>
     <p><a class="btn btn-lg btn-primary" role="button" href="memory.html">詐欺診断を試す</a></p>
   </div>
+  <div>
+    <button class="add-button">ホーム画面に追加</button>
+  </div>
 </div>
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/sagishindan_index.js"></script>
 <script>
