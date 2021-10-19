@@ -13,6 +13,8 @@
     <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
+  <link rel="manifest" href="manifest.json">
+
   <style>
     #result th,
     #result td {
@@ -86,6 +88,14 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/sagishindan_detailed_result.js"></script>
-
+<script>
+  if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+      .register('js/serviceworker.js')
+      .then(function() {
+          console.log('Service Worker Registered');
+      });
+  }
+</script>
 </body>
 </html>
